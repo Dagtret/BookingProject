@@ -36,3 +36,18 @@ def generate_random_booking_data(booking_dates):
         "additionalneeds": additionalneeds
     }
     return data
+
+@pytest.fixture
+def generate_custom_booking_data():
+    data = {
+        "firstname": "Balerino",
+        "lastname": "Kapuchino",
+        "totalprice": 228,
+        "depositpaid": False,
+        "bookingdates":{
+            "checkin": "2025-05-26",
+            "checkout": "2025-05-31"
+        },
+        "additionalneeds": "During news civil size ready answer know."
+    }
+    return data
